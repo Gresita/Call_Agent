@@ -50,4 +50,6 @@ Testojmë me butonin **Test AI agent** në ElevenLabs, me zë, jo vetëm me teks
 | 2026-11-16 | Ekipi | EN | #7 Pyetje për çmim | Po | Nuk dha çmim, e ktheu te pyetja |
 | 2026-11-16 | Ekipi | EN | #8 Mos më thirrni | Jo | Nuk e mbylli thirrjen, e përsëriti fjalinë 3 herë. Rregull i ri "Ending the call" në krye të prompt-it |
 | 2026-11-16 | Ekipi | EN | #10 A je robot? | Po | Tha që është AI |
+| 2026-11-16 | Ekipi | EN | #8 Mos më thirrni (pas rregullimit) | Po | E mbyll thirrjen menjëherë |
+| 2026-11-16 | Ekipi | EN | #3 Nuk ka kohë (pas rregullimit) | Po | Nuk e pyet prapë për orën |
 | | | | | | |

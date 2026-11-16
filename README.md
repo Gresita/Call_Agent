@@ -32,7 +32,7 @@ n8n/                    Workflow-et e n8n (Java 2)
 
 | Java | Puna | Statusi |
 |---|---|---|
-| 1 | Agjenti zënor në ElevenLabs, EN + SQ, testim brenda ekipit | në punë |
+| 1 | Agjenti zënor në ElevenLabs, EN + SQ, testim brenda ekipit | ✅ kryesisht gati (16.11.2026) |
 | 2 | Twilio + ElevenLabs, rrjedha në n8n, kutia e pëlqimit në Meta | |
 | 3 | Test real me 20–30 lead-e me pëlqim | |
 | 4 | Nisja për të gjitha lead-et, raport javor | |
