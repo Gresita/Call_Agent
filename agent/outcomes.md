@@ -41,3 +41,18 @@ I përdorim në Javën 3 për të parë cilat thirrje duhen dëgjuar:
 2. `mentioned_recording`: Agent said the call is recorded.
 3. `no_prices`: Agent did not give prices, payment plans or project details.
 4. `followed_flow`: Agent asked only the questions in the call flow, in order.
+
+## Statuset ekzistuese në Pixxi (parë më 16.11.2026)
+
+Pixxi ka tashmë këto faza (Control Center → Database Stages, plani "Standard"):
+Not Contacted, Contacted, Qualified, Interested, Nurturing, Opportunity, Converted, Not Interested, Invalid, Duplicate.
+
+Propozim për lidhjen, në vend që të krijojmë tag-e të reja (duhet konfirmuar nga kompania,
+dhe duhet parë a vlejnë të njëjtat faza edhe te Leads, jo vetëm te Database):
+
+| Rezultati i agjentit | Faza në Pixxi |
+|---|---|
+| interested | Interested |
+| not_now | Nurturing |
+| wrong_or_not_interested | Not Interested (ose Invalid kur nuk e plotësoi formularin) |
+| nuk u përgjigj (nga n8n) | Not Contacted |
