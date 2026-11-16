@@ -40,4 +40,5 @@ Testojmë me butonin **Test AI agent** në ElevenLabs, me zë, jo vetëm me teks
 | 2026-11-16 | Ekipi | EN | Tingulli i zërit (Dion's VO) | Jo | Tingëllonte shumë "happy". U rregullua: seksioni Tone në prompt + Stability ~70–80% |
 | 2026-11-16 | Ekipi | EN | Tingulli i zërit, pas rregullimit | Po | I qetë dhe natyral, i miratuar nga ekipi |
 | 2026-11-16 | Ekipi | EN | Rrjedha e plotë | Jo | Thoshte "thank you" pas çdo përgjigjeje. U rregullua: rregull i ri te Tone, "thank you" vetëm një herë në fund |
+| 2026-11-16 | Ekipi | EN | Mbyllja e thirrjes | Jo | Thoshte "I'll end the call now" dhe vazhdonte me "Goodbye" pa e mbyllur. Rregullim: aktivizo tool-in End call + rregull më i qartë në prompt |
 | | | | | | |
