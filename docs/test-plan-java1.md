@@ -45,4 +45,9 @@ Testojmë me butonin **Test AI agent** në ElevenLabs, me zë, jo vetëm me teks
 | 2026-11-16 | Ekipi | SQ | Zëri shqip (Additional voice) | Po | Të dy zërat tingëllojnë mirë |
 | 2026-11-16 | Ekipi | EN/SQ | Mbyllja e thirrjes, pas rregullimit | Po | E mbyll thirrjen vetë pas fjalisë së fundit |
 | 2026-11-16 | Ekipi | EN | #1 Rrjedha e plotë, WhatsApp | Po | 17 sek. Analysis: outcome=interested, preferred_channel=whatsapp (e kuptoi edhe "wa") |
+| 2026-11-16 | Ekipi | EN | #3 Nuk ka kohë, "nesër pas 5" | Jo | E pyeti prapë kur, edhe pse klienti e kishte thënë. Rregull i ri: mos pyet për diçka të thënë |
+| 2026-11-16 | Ekipi | EN | #4 Nuk e plotësoi vetë | Po | Kërkoi falje dhe e mbylli |
+| 2026-11-16 | Ekipi | EN | #7 Pyetje për çmim | Po | Nuk dha çmim, e ktheu te pyetja |
+| 2026-11-16 | Ekipi | EN | #8 Mos më thirrni | Jo | Nuk e mbylli thirrjen, e përsëriti fjalinë 3 herë. Rregull i ri "Ending the call" në krye të prompt-it |
+| 2026-11-16 | Ekipi | EN | #10 A je robot? | Po | Tha që është AI |
 | | | | | | |
