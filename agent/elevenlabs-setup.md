@@ -30,8 +30,17 @@ Hapat në dashboard-in e ElevenLabs Agents. Emrat e menuve mund të ndryshojnë 
 
 ## 3. Voice
 
-- Zgjidh 2–3 zëra që tingëllojnë natyralë në **të dyja** gjuhët dhe krahasoji gjatë testit.
-- Fillo me stability mesatare dhe shpejtësi normale.
+- **Vendosur (16 nëntor 2026): zëri kryesor është `Dion's VO`**, zëri i klonuar i kompanisë.
+  Një zë i vetëm, si **Primary**, pa zëra shtesë.
+- Duhet konfirmim me shkrim nga Dion që zëri përdoret për thirrje me klientë.
+- Fillo me stability dhe similarity në vlerat default, dhe rregulloji pas testit.
+
+## 3a. Shqipja
+
+- Te **Additional languages**, në modalitetin **Custom**, shqipja nuk del në listë.
+  Duhet provuar edhe me **Realtime**.
+- Me zërin e klonuar agjenti mund të tingëllojë shqiptar, por të kuptuarit e shqipes
+  nga klienti varet nga lista e gjuhëve, jo nga zëri. Kjo testohet me thirrje prove.
 
 ## 4. Analysis
 
