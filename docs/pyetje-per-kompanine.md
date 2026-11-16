@@ -23,3 +23,14 @@ Përditësuar më 16.11.2026. Pa këto nuk mund ta përfundojmë Javën 2.
 - **16.11.2026 (Dion):** AI thërret **vetëm lead-et nga reklamat** (Meta, X, etj.), **jo lead-et nga portalet**
   (Bayut, Property Finder, Dubizzle). n8n filtron sipas fushës "Source of Lead" në Pixxi.
 - Kontakti me Pixxi support: grupi në WhatsApp ku Dion na shtoi.
+
+## Ku mbetëm (16.11.2026, mbrëmje)
+
+Gati: agjenti zanor; workflow "Post-call result" (lexon rezultatin, llogarit statusin, ruan në tabelë, publikuar);
+tabela `call_agent_leads`; credential `Call Agent · Pixxi`; kodi `n8n/code/plan-calls.js`.
+
+Nesër: workflow "END Call Agent - Lead intake" (Çdo 2 minuta → Merr lead-et nga Pixxi → Lexo tabelën →
+Planifiko thirrjet → shto lead-et e reja / shëno thirrjen), pastaj shkrimi në Pixxi (fazë + shënim)
+dhe njoftimi në WhatsApp.
+
+Pret të tjerët: SIP nga Callgear (numri +971), kutia e pëlqimit në formularin e Meta-s, procesi i DNCR për numrat e UAE.
