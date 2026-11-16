@@ -45,14 +45,17 @@ Hapat në dashboard-in e ElevenLabs Agents. Emrat e menuve mund të ndryshojnë 
 ## 3. Voice
 
 - **Vendosur (16 nëntor 2026): zëri kryesor është `Dion's VO`**, zëri i klonuar i kompanisë.
-  Një zë i vetëm, si **Primary**, pa zëra shtesë.
+  Zëri **Primary** për anglisht.
+- **Zë shtesë për shqip** (Additional voice), me label `albanian` dhe përshkrim
+  "Use this voice whenever you speak Albanian." Të dy zërat u miratuan nga ekipi më 16.11.2026.
 - Duhet konfirmim me shkrim nga Dion që zëri përdoret për thirrje me klientë.
 - Fillo me stability dhe similarity në vlerat default, dhe rregulloji pas testit.
 
 ## 3a. Shqipja
 
 - Te **Additional languages**, në modalitetin **Custom**, shqipja nuk del në listë.
-  Duhet provuar edhe me **Realtime**.
+- **Testi i 16.11.2026:** megjithatë agjenti e kupton shqipen dhe kalon vetë në shqip
+  (te testi me tekst). Duhet konfirmuar edhe në testin me zë.
 - Me zërin e klonuar agjenti mund të tingëllojë shqiptar, por të kuptuarit e shqipes
   nga klienti varet nga lista e gjuhëve, jo nga zëri. Kjo testohet me thirrje prove.
 
