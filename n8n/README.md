@@ -26,3 +26,15 @@ Këto workflow janë live dhe i përkasin kompanisë. **Nuk hapen për editim, n
 ## Të dhënat e qasjes
 
 Nuk ruhen këtu. Llogaritë dhe çelësat ruhen në password manager-in e kompanisë ose te n8n credentials.
+
+## Si vijnë lead-et sot (parë më 16.11.2026, vetëm lexim)
+
+Workflow-i WhatsApp v18 fillon me një **webhook "Pixxi lead"**: Pixxi e dërgon çdo lead të ri
+direkt te n8n. Pastaj workflow-i i dërgon klientit mesazh në WhatsApp dhe e njofton agjentin.
+Ka edhe trigger për mesazhet hyrëse të WhatsApp-it dhe një kontroll çdo minutë për lead-et në pritje.
+
+Për Call Agent-in kemi dy rrugë pa e prekur v18:
+1. Pixxi dërgon një webhook të dytë te workflow-i ynë (nëse Pixxi lejon më shumë se një).
+2. Workflow-i ynë pyet API-n e Pixxi çdo 1–2 minuta për lead-e të reja.
+
+Duhet vendosur me kompaninë: thirrja vjen bashkë me mesazhin e WhatsApp-it, apo në vend të tij.
