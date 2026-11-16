@@ -28,3 +28,10 @@ Burimi: https://api-docs.pixxicrm.com (dërguar nga Pixxi support më 16.11.2026
   që `id` + `tagId` vetëm nuk fshin asgjë. Testohet vetëm me një lead testi.
 - Webhook-un e v18 **nuk e çregjistrojmë kurrë** (`unsubscribe` nuk përdoret).
 - Subscribe është ndryshim në Pixxi-n e kompanisë: bëhet vetëm pasi ta kemi parë listën ekzistuese.
+
+## Testuar më 16.11.2026
+
+- Token-i funksionon (credential `Call Agent · Pixxi` në n8n).
+- `webhook/v1/subscription/list` → "No permission to access webhooks". Leja duhet aktivizuar nga Pixxi support.
+- `agent/list` → kthen `id`, `name`, `email`, `phone`, `deptId`. **Numri i agjentit vjen nga API.**
+  Disa llogari (p.sh. Marketing) nuk kanë numër: atëherë njoftimi shkon te një numër rezervë.
