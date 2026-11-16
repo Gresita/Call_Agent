@@ -5,7 +5,7 @@ Hapat në dashboard-in e ElevenLabs Agents. Emrat e menuve mund të ndryshojnë 
 ## 1. Krijo agjentin
 
 - **Agents → Create agent → Blank agent**
-- Emri: `END Lead Verifier`
+- Emri: `END Call Agent`
 
 ## 2. Agent
 

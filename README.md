@@ -1,4 +1,4 @@
-# END Lead Verifier
+# Call Agent · END Properties
 
 Agjent AI që thërret çdo lead të ri të END Properties brenda pak minutash, bën 3 pyetje
 (rreth 30 sekonda) dhe shkruan rezultatin në Pixxi si një nga 4 tag-et:
