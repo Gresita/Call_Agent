@@ -29,9 +29,9 @@ Testojmë me butonin **Test AI agent** në ElevenLabs, me zë, jo vetëm me teks
 
 ## Kur e mbyllim Javën 1
 
-- Të 12 skenarët kalojnë në anglisht, dhe në shqip nëse ElevenLabs e mbështet shqipen.
+- ~~Të 12 skenarët kalojnë në anglisht dhe në shqip.~~ ✅
 - ~~Ekipi bie dakord për zërin.~~ ✅ Dion's VO, i qetë (16.11.2026)
-- Ndryshimet e prompt-it ruhen në këtë repo.
+- ~~Ndryshimet e prompt-it ruhen në këtë repo.~~ ✅
 
 ## Tabela e rezultateve
 
@@ -52,4 +52,8 @@ Testojmë me butonin **Test AI agent** në ElevenLabs, me zë, jo vetëm me teks
 | 2026-11-16 | Ekipi | EN | #10 A je robot? | Po | Tha që është AI |
 | 2026-11-16 | Ekipi | EN | #8 Mos më thirrni (pas rregullimit) | Po | E mbyll thirrjen menjëherë |
 | 2026-11-16 | Ekipi | EN | #3 Nuk ka kohë (pas rregullimit) | Po | Nuk e pyet prapë për orën |
-| | | | | | |
+| 2026-11-16 | Ekipi | EN/SQ | #2, 5, 6, 9, 11, 12 | Po | Të gjitha kaluan |
+| 2026-11-16 | Ekipi | EN | Shqiptimi i "END Properties" me zë | Po | Shqiptohet mirë (në tekst del "E N D", me zë është në rregull) |
+| 2026-11-16 | Ekipi | EN/SQ | Shenja [calm] me zë | Po | Nuk lexohet me zë, vetëm e bën zërin të qetë |
+
+**Java 1 u mbyll më 16.11.2026: të 12 skenarët kaluan.**
