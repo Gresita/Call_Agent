@@ -30,11 +30,13 @@ Testojmë me butonin **Test AI agent** në ElevenLabs, me zë, jo vetëm me teks
 ## Kur e mbyllim Javën 1
 
 - Të 12 skenarët kalojnë në anglisht, dhe në shqip nëse ElevenLabs e mbështet shqipen.
-- Ekipi bie dakord për zërin.
+- ~~Ekipi bie dakord për zërin.~~ ✅ Dion's VO, i qetë (16.11.2026)
 - Ndryshimet e prompt-it ruhen në këtë repo.
 
 ## Tabela e rezultateve
 
 | Data | Testuesi | Gjuha | Skenari | Kaloi? | Shënime |
 |---|---|---|---|---|---|
+| 2026-11-16 | Ekipi | EN | Tingulli i zërit (Dion's VO) | Jo | Tingëllonte shumë "happy". U rregullua: seksioni Tone në prompt + Stability ~70–80% |
+| 2026-11-16 | Ekipi | EN | Tingulli i zërit, pas rregullimit | Po | I qetë dhe natyral, i miratuar nga ekipi |
 | | | | | | |
