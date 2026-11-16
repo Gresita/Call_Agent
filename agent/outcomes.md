@@ -56,3 +56,12 @@ dhe duhet parë a vlejnë të njëjtat faza edhe te Leads, jo vetëm te Database
 | not_now | Nurturing |
 | wrong_or_not_interested | Not Interested (ose Invalid kur nuk e plotësoi formularin) |
 | nuk u përgjigj (nga n8n) | Not Contacted |
+
+### Konfirmuar te një lead i vërtetë (16.11.2026)
+
+- Lead-i ka statusin **New** dhe fazën **Not Contacted**, pra fazat vlejnë edhe për Leads.
+- **Notes** ekziston te lead-i: aty shkruajmë përmbledhjen dhe transkriptin.
+- **Lead Agent** është agjenti që njoftohet në WhatsApp.
+- Fusha "Project Type" është bosh. Projekti del nga **Campaign Name** / **Form Name**
+  (p.sh. "Rockefeller | Lead Gen | KOS | Nov26"), prandaj `project_name` nxirret prej tyre.
+- Fushata ka shenjën e vendit (p.sh. KOS = Kosovë). Mund të na ndihmojë të zgjedhim `language` (KOS → sq).
