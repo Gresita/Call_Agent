@@ -44,4 +44,5 @@ Testojmë me butonin **Test AI agent** në ElevenLabs, me zë, jo vetëm me teks
 | 2026-11-16 | Ekipi | SQ | Klienti flet shqip që në fillim | Po | E kuptoi dhe kaloi në shqip. Por nuk e përsëriti "kjo thirrje regjistrohet", u rregullua në prompt |
 | 2026-11-16 | Ekipi | SQ | Zëri shqip (Additional voice) | Po | Të dy zërat tingëllojnë mirë |
 | 2026-11-16 | Ekipi | EN/SQ | Mbyllja e thirrjes, pas rregullimit | Po | E mbyll thirrjen vetë pas fjalisë së fundit |
+| 2026-11-16 | Ekipi | EN | #1 Rrjedha e plotë, WhatsApp | Po | 17 sek. Analysis: outcome=interested, preferred_channel=whatsapp (e kuptoi edhe "wa") |
 | | | | | | |
