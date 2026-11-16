@@ -17,3 +17,9 @@ Përditësuar më 16.11.2026. Pa këto nuk mund ta përfundojmë Javën 2.
 4. **WhatsApp**: klienti merr sot mesazh nga v18. Thirrja vjen bashkë me mesazhin apo në vend të tij? A mund ta përdorim "WhatsApp Real Token" për t'i njoftuar agjentët, dhe a ka template të miratuar për njoftimin e agjentit?
 5. **Error alert**: a mund ta zgjedhim "END automation - error alert" si Error Workflow për workflow-in tonë (vetëm referencë)?
 6. **Çelësat e portaleve** u shfaqën në një screenshot më 16.11.2026: a duhen ndërruar?
+
+## Vendime të marra
+
+- **16.11.2026 (Dion):** AI thërret **vetëm lead-et nga reklamat** (Meta, X, etj.), **jo lead-et nga portalet**
+  (Bayut, Property Finder, Dubizzle). n8n filtron sipas fushës "Source of Lead" në Pixxi.
+- Kontakti me Pixxi support: grupi në WhatsApp ku Dion na shtoi.
