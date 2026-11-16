@@ -25,7 +25,7 @@ agent/
   elevenlabs-setup.md   Si konfigurohet agjenti në ElevenLabs
 docs/
   test-plan-java1.md    Skenarët e testimit brenda ekipit
-n8n/                    Workflow-et e n8n (Java 2)
+n8n/README.md           n8n i kompanisë dhe rregullat (Java 2)
 ```
 
 ## Plani
