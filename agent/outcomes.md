@@ -65,3 +65,17 @@ dhe duhet parë a vlejnë të njëjtat faza edhe te Leads, jo vetëm te Database
 - Fusha "Project Type" është bosh. Projekti del nga **Campaign Name** / **Form Name**
   (p.sh. "Rockefeller | Lead Gen | KOS | Nov26"), prandaj `project_name` nxirret prej tyre.
 - Fushata ka shenjën e vendit (p.sh. KOS = Kosovë). Mund të na ndihmojë të zgjedhim `language` (KOS → sq).
+
+## Fazat e vërteta të lead-eve në Pixxi (nga API, 16.11.2026)
+
+Fazat e lead-eve BUY ndryshojnë nga ato të Database. Propozimi i ri (zëvendëson tabelën më lart, pret konfirmimin e kompanisë):
+
+| Rezultati i agjentit | Faza në Pixxi | tagId |
+|---|---|---|
+| interested | 4- Qualified/ Interested | 2864 |
+| not_now | Follow Up | 2868 |
+| wrong_or_not_interested | 1- Definitely Not Interested | 2865 |
+| nuk u përgjigj (1 ose 2 herë) | No Answer | 2863 |
+
+Fazat e tjera (Not Contacted 2529, 2- No Responses, Emailed 11631, 3- Future Prospect 6839, 5- HOT BUYER 2867) nuk i vendos agjenti AI.
+Lead-et RENT kanë vetëm "Default tag" (2530), prandaj agjenti thërret vetëm lead-et BUY.
