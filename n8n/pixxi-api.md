@@ -35,3 +35,14 @@ Burimi: https://api-docs.pixxicrm.com (dërguar nga Pixxi support më 16.11.2026
 - `webhook/v1/subscription/list` → "No permission to access webhooks". Leja duhet aktivizuar nga Pixxi support.
 - `agent/list` → kthen `id`, `name`, `email`, `phone`, `deptId`. **Numri i agjentit vjen nga API.**
   Disa llogari (p.sh. Marketing) nuk kanë numër: atëherë njoftimi shkon te një numër rezervë.
+
+## Si duket një lead nga reklamat (lead/list, 16.11.2026)
+
+- `clientSource` / `customClientSource`: `META_ADS` (reklamat mbarojnë me `_ADS`).
+- `tagId`: 2529 = Not Contacted (lead i ri). Lead-et që agjentët i kanë prekur kanë fazë tjetër.
+- `campaignName`: p.sh. `Rockefeller \| Lead Gen \| KOS \| Nov26` → projekti = pjesa e parë, vendi = `KOS`.
+- `formName`, `formId`, `adName`, `leadId` (ID e Meta-s).
+- `extend`: JSON me përgjigjet e formularit të Meta-s. Kutia e pëlqimit do të shfaqet këtu.
+- `agentInfo`: `name`, `phone`, `email` e agjentit të caktuar.
+- `createTime`: me orën e Dubait (+04:00).
+- `isDuplicated`: lead i dyfishtë.

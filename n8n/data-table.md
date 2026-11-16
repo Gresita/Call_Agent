@@ -10,6 +10,8 @@
 | `project_name` | String | Projekti (nga Campaign/Form Name) |
 | `language` | String | `en` ose `sq` |
 | `lead_agent` | String | Agjenti i lead-it në Pixxi |
+| `agent_phone` | String | Numri i agjentit (për WhatsApp) |
+| `consent` | Boolean | Pëlqimi nga formulari i Meta-s |
 | `status` | String | `pending`, `calling`, `interested`, `not_now`, `wrong_or_not_interested`, `no_answer`, `no_contact` |
 | `attempts` | Number | Sa herë është thirrur |
 | `last_call_at` | Date | Thirrja e fundit |
