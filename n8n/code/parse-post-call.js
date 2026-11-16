@@ -1,4 +1,4 @@
-// n8n Code node "Parse result" (Mode: Run Once for All Items)
+// n8n Code node "Lexo rezultatin" (Mode: Run Once for All Items)
 // Workflow: END Call Agent - Post-call result
 // Merr payload-in post_call_transcription të ElevenLabs dhe e kthen në një rresht të pastër.
 

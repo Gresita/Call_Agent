@@ -1,10 +1,10 @@
-// n8n Code node "Compute status" (Mode: Run Once for All Items)
+// n8n Code node "Llogarit statusin" (Mode: Run Once for All Items)
 // Workflow: END Call Agent - Post-call result
-// Para tij: "Parse result" (Code) dhe "Find lead" (Data table → Get row, Always Output Data = ON).
+// Para tij: "Lexo rezultatin" (Code) dhe "Gjej lead-in" (Data table → Get row, Always Output Data = ON).
 // Vendos statusin dhe kur thirret prapë lead-i, sipas rregullave të planit.
 
-const r = $('Parse result').first().json;
-const existing = $('Find lead').first().json || {};
+const r = $('Lexo rezultatin').first().json;
+const existing = $('Gjej lead-in').first().json || {};
 
 const attempts = Number(existing.attempts) || 1; // thirrja aktuale numërohet te workflow-i para thirrjes
 const now = new Date();
