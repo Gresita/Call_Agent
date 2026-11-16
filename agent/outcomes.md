@@ -68,7 +68,7 @@ dhe duhet parë a vlejnë të njëjtat faza edhe te Leads, jo vetëm te Database
 
 ## Fazat e vërteta të lead-eve në Pixxi (nga API, 16.11.2026)
 
-Fazat e lead-eve BUY ndryshojnë nga ato të Database. Propozimi i ri (zëvendëson tabelën më lart, pret konfirmimin e kompanisë):
+Fazat e lead-eve BUY ndryshojnë nga ato të Database. Vendosur më 16.11.2026 (zëvendëson tabelën më lart):
 
 | Rezultati i agjentit | Faza në Pixxi | tagId |
 |---|---|---|
