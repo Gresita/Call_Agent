@@ -17,7 +17,7 @@ Hapat në dashboard-in e ElevenLabs Agents. Emrat e menuve mund të ndryshojnë 
 | Language override (Albanian) | First message shqip nga i njëjti skedar |
 | System prompt | nga [system-prompt.md](system-prompt.md) |
 | LLM | një model i shpejtë me vonesë të ulët; e zgjedhim gjatë testit |
-| Tools | aktivizo **End call** dhe **Language detection** |
+| System tools | **ON:** End conversation, Detect language, Voicemail detection. **OFF:** të tjerat (shih poshtë) |
 
 **Dynamic variables** (n8n i dërgon me çdo thirrje):
 
@@ -27,6 +27,20 @@ Hapat në dashboard-in e ElevenLabs Agents. Emrat e menuve mund të ndryshojnë 
 | `language` | sq |
 | `lead_name` | Test |
 | `pixxi_lead_id` | test-001 |
+
+### System tools
+
+| Tool | Statusi | Pse |
+|---|---|---|
+| End conversation | ON | Agjenti e mbyll thirrjen vetë pas fjalisë së fundit |
+| Detect language | ON | Kalon nga anglishtja në shqip, nëse klienti flet shqip |
+| Voicemail detection | ON | Kur bie në sekretari, e mbyll pa lënë mesazh, dhe n8n e shënon "Nuk u përgjigj" |
+| Skip turn | OFF | Nuk na duhet në thirrje 30-sekondëshe |
+| Update state | OFF | Nuk e përdorim |
+| Transfer to agent | OFF | Kalon te një agjent tjetër AI, jo te njeri |
+| Transfer to number | OFF | Mundësi për më vonë: lidhja live e lead-it të interesuar me agjentin njerëzor |
+| Play keypad touch tone | OFF | Për menutë "shtyp 1", nuk na duhet |
+| Flag issue for review | OFF tani | Mund ta aktivizojmë në Javën 3, për të shënuar thirrjet me probleme |
 
 ## 3. Voice
 

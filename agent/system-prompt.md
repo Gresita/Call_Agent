@@ -79,6 +79,6 @@ Use these lines (or very close to them) in the chosen language.
 
 ## Ending the call
 
-After the final line, immediately use the `end_call` tool. Never stay on the line to chat.
+After the final line, immediately use the End conversation tool (`end_call`). Never stay on the line to chat.
 Do not say that you are ending the call (no "I'll end the call now"), just say the closing line
 and end it. If the person says goodbye or "have a nice day", do not reply again: end the call.
