@@ -62,3 +62,13 @@ Pret të tjerët: SIP nga Callgear, kutia e pëlqimit në Meta, DNCR, konfirmimi
      (sot pothuajse të gjitha nga Kosova).
   2. **Më vonë: numri i kompanisë te du / e& (SIP trunk)** për lead-et me numër të UAE, sepse rregullat e UAE kërkojnë
      numër të regjistruar në emër të kompanisë me lejen e telemarketingut. n8n e zgjedh linjën sipas vendit të numrit.
+
+## Ndryshim i qëllimit (17.11.2026)
+
+- Vetëm lead-et nga **Meta**.
+- Vetëm vendet: **Kosovë** (agjenti shqip), **Francë** dhe **Gjermani** (agjenti anglisht). UAE nuk përfshihet tani,
+  prandaj DNCR dhe numri i UAE nuk na duhen për fazën e parë.
+- AI merret kryesisht me lead-et ekzistuese në fazat **Follow Up**, **No Answer** dhe **3- Future Prospect**.
+- Për t'u konfirmuar: a vazhdon AI edhe me lead-et e reja; sa ditë pa aktivitet nga agjenti; sa thirrje në ditë.
+- Për t'u kontrolluar ligjërisht: Franca (orari i thirrjeve dhe pëlqimi), Gjermania (pëlqimi i shprehur për thirrje
+  dhe pëlqimi për regjistrimin e thirrjes), EU AI Act (njoftimi që është AI).
