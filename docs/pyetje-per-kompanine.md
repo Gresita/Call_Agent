@@ -56,3 +56,9 @@ Pret të tjerët: SIP nga Callgear, kutia e pëlqimit në Meta, DNCR, konfirmimi
 - **17.11.2026:** Kompania **nuk ka llogari në Callgear** (fushat te Pixxi ishin bosh/autofill). Numri për thirrjet mbetet i hapur:
   duhet ditur cili numër është i regjistruar me lejen e telemarketingut dhe te cili operator (du / e&).
   Për testet e brendshme mund të përdoret Twilio (lidhje direkte me ElevenLabs); për lead-et e vërteta duhet numri i kompanisë.
+
+- **17.11.2026, vendim për linjën e telefonit (plan afatgjatë):**
+  1. **Tani: Twilio.** Lidhje zyrtare me ElevenLabs, gati brenda ditës. Përdoret për testet e brendshme dhe për lead-et jashtë UAE
+     (sot pothuajse të gjitha nga Kosova).
+  2. **Më vonë: numri i kompanisë te du / e& (SIP trunk)** për lead-et me numër të UAE, sepse rregullat e UAE kërkojnë
+     numër të regjistruar në emër të kompanisë me lejen e telemarketingut. n8n e zgjedh linjën sipas vendit të numrit.
