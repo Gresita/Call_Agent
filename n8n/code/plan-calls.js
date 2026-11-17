@@ -107,7 +107,9 @@ let calls = 0;
 for (const r of rows) {
   if (calls >= MAX_CALLS_PER_RUN) break;
   if (r.do_not_call) continue;
-  if (!['pending', 'no_answer', 'not_now'].includes(r.status)) continue;
+  // 'calling' = thirrja u nis por nuk erdhi rezultat (p.sh. dështoi webhook-u). next_call_at u vendos +1 ditë kur u nis.
+  const retryStuck = r.status === 'calling' && (Number(r.attempts) || 0) < 2;
+  if (!['pending', 'no_answer', 'not_now'].includes(r.status) && !retryStuck) continue;
   if (!r.next_call_at || new Date(r.next_call_at) > now) continue;
   if (REQUIRE_CONSENT && !r.consent) continue;
 

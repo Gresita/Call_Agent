@@ -8,7 +8,33 @@ const body = $input.first().json.body || {};
 const data = body.data || {};
 
 // Vetëm bisedat e agjentit tonë. Të tjerat injorohen.
-if (body.type !== 'post_call_transcription' || data.agent_id !== AGENT_ID) {
+if (data.agent_id !== AGENT_ID) {
+  return [];
+}
+
+// Thirrja nuk u lidh fare (busy / no-answer / unknown): trajtohet si "nuk u përgjigj".
+// Lead-i gjendet sipas conversation_id (ruhet në tabelë kur niset thirrja).
+if (body.type === 'call_initiation_failure') {
+  const fv =
+    (data.conversation_initiation_client_data &&
+      data.conversation_initiation_client_data.dynamic_variables) || {};
+  return [
+    {
+      json: {
+        conversation_id: data.conversation_id || null,
+        pixxi_lead_id: fv.pixxi_lead_id || null,
+        outcome: null,
+        failure_reason: data.failure_reason || 'unknown',
+        do_not_call: false,
+        summary: 'Call not connected: ' + (data.failure_reason || 'unknown'),
+        transcript: '',
+        call_duration_secs: 0,
+      },
+    },
+  ];
+}
+
+if (body.type !== 'post_call_transcription') {
   return [];
 }
 

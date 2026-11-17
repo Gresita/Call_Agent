@@ -31,7 +31,7 @@ if (r.do_not_call || r.outcome === 'wrong_or_not_interested') {
 return [
   {
     json: {
-      pixxi_lead_id: r.pixxi_lead_id,
+      pixxi_lead_id: r.pixxi_lead_id || existing.pixxi_lead_id,
       status,
       attempts,
       last_call_at: existing.last_call_at || now.toISOString(),
