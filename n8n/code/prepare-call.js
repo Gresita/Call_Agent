@@ -9,7 +9,9 @@ const AGENT_ID = 'agent_8201m7htqaqsfxht7r924r64vfjk';  // END Call Agent
 const PHONE_NUMBER_ID = 'VENDOSE_PAS_TWILIO';            // ID e numrit në ElevenLabs (Phone Numbers), pasi të importohet numri i Twilio-s
 
 const r = $json;
-const project = r.project_name || 'END Properties';
+const lang0 = r.language === 'sq' ? 'sq' : 'en';
+const GENERIC_PROJECT = { en: 'our properties in Dubai', sq: 'pronat tona në Dubai' };
+const project = r.project_name && r.project_name !== 'END Properties' ? r.project_name : GENERIC_PROJECT[lang0];
 
 // Fjalia e parë: lead i ri (plotësoi formularin tani) ose follow-up (lead i vjetër).
 const followup = r.call_type === 'followup';

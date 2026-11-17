@@ -10,7 +10,7 @@ const AD_SOURCE = /^META_ADS$/;
 const QUIET_DAYS = 7;      // agjenti nuk e ka prekur lead-in kaq ditë
 const DAILY_LIMIT = 30;    // sa lead-e të vjetra shtohen në ditë
 const COUNTRY_LANG = { XK: 'sq', FR: 'en', DE: 'en' };
-const PROJECT_NAMES = { END: 'END Properties' };
+const GENERIC = ['END', 'END PROPERTIES']; // fushata të përgjithshme, pa projekt
 
 const pages = $('Merr të gjitha lead-et').all().map((i) => i.json);
 const leads = pages.flatMap((p) => (p.data && p.data.list) || []);
@@ -29,6 +29,14 @@ const parseDubai = (s) => (s ? new Date(String(s).replace(' ', 'T') + '+04:00') 
 const lastActivity = (l) => {
   const ds = [parseDubai(l.updateTime), parseDubai(l.lastFollowTime)].filter(Boolean);
   return ds.length ? new Date(Math.max(...ds)) : parseDubai(l.createTime);
+};
+// Projekti = pjesa e parë e emrit të fushatës "Projekt | Lead Gen | KOS | Nov26".
+// Nëse fushata nuk ka këtë formë (p.sh. "Meet our real estate expert Greg in Paris."), projekti mbetet bosh
+// dhe agjenti thotë "pronat tona në Dubai" / "our properties in Dubai".
+const projectOf = (parts) => {
+  const p = String(parts[0] || '').trim();
+  if (parts.length < 2 || !p || GENERIC.includes(p.toUpperCase()) || p.split(/\s+/).length > 4) return null;
+  return p;
 };
 const campaignParts = (l) =>
   String(l.campaignName || l.adName || l.formName || '')
@@ -75,7 +83,7 @@ for (const l of candidates) {
     country,
     call_type: 'followup',
     lead_name: l.name || null,
-    project_name: PROJECT_NAMES[String(parts[0] || '').toUpperCase()] || parts[0] || null,
+    project_name: projectOf(parts),
     language: COUNTRY_LANG[country],
     lead_agent: agent.name || null,
     agent_phone: agent.phone || null,

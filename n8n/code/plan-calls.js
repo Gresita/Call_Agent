@@ -20,7 +20,7 @@ const COUNTRIES = {
   FR: { lang: 'en', tz: 'Europe/Paris', consent: true, windows: { days: [1, 2, 3, 4, 5], hours: [[10, 13], [14, 20]] } },
   DE: { lang: 'en', tz: 'Europe/Berlin', consent: true, windows: { days: [1, 2, 3, 4, 5], hours: [[9, 19]] } },
 };
-const PROJECT_NAMES = { END: 'END Properties' }; // fushata të përgjithshme, pa projekt
+const GENERIC = ['END', 'END PROPERTIES']; // fushata të përgjithshme, pa projekt
 
 const leads = (($('Merr lead-et nga Pixxi').first().json.data) || {}).list || [];
 const rows = $('Lexo tabelën').all().map((i) => i.json).filter((r) => r && r.pixxi_lead_id);
@@ -53,6 +53,14 @@ const inWindow = (c, ln) =>
 // createTime vjen me orën e Dubait, p.sh. "2026-11-16 16:17:20"
 const parseDubai = (s) => new Date(String(s).replace(' ', 'T') + '+04:00');
 
+// Projekti = pjesa e parë e emrit të fushatës "Projekt | Lead Gen | KOS | Nov26".
+// Nëse fushata nuk ka këtë formë (p.sh. "Meet our real estate expert Greg in Paris."), projekti mbetet bosh
+// dhe agjenti thotë "pronat tona në Dubai" / "our properties in Dubai".
+const projectOf = (parts) => {
+  const p = String(parts[0] || '').trim();
+  if (parts.length < 2 || !p || GENERIC.includes(p.toUpperCase()) || p.split(/\s+/).length > 4) return null;
+  return p;
+};
 const campaignParts = (l) =>
   String(l.campaignName || l.adName || l.formName || '')
     .replace(/\\/g, '').split('|').map((s) => s.trim()).filter(Boolean);
@@ -93,7 +101,7 @@ for (const l of leads) {
     country,
     call_type: 'new',
     lead_name: l.name || null,
-    project_name: PROJECT_NAMES[String(parts[0] || '').toUpperCase()] || parts[0] || null,
+    project_name: projectOf(parts),
     language: COUNTRIES[country].lang,
     lead_agent: agent.name || null,
     agent_phone: agent.phone || null,
