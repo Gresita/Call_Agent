@@ -47,8 +47,8 @@ Gati në n8n:
 - Credentials: `Call Agent · Pixxi`, `Call Agent · ElevenLabs`.
 
 Për t'u kontrolluar para testit të parë:
-- ElevenLabs → agjenti → Security: lejo override për **First message** (n8n dërgon fjalinë e parë shqip/anglisht).
-- ElevenLabs → webhook: që të dërgohen edhe ngjarjet **call_initiation_failure**.
+- ✅ ElevenLabs → agjenti → Security: override vetëm për **First message**, **Enable authentication** aktiv (17.11.2026).
+- Testohet në Javën 3: thirrje te një numër që nuk përgjigjet → a vjen **call_initiation_failure** te n8n.
 - Te "Përgatit thirrjen": vendos `PHONE_NUMBER_ID` pasi të lidhet numri nga Callgear.
 
 Pret të tjerët: SIP nga Callgear, kutia e pëlqimit në Meta, DNCR, konfirmimi i Dion-it për zërin, plani i ElevenLabs.
