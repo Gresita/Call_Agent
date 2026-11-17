@@ -72,3 +72,8 @@ Pret të tjerët: SIP nga Callgear, kutia e pëlqimit në Meta, DNCR, konfirmimi
 - Për t'u konfirmuar: a vazhdon AI edhe me lead-et e reja; sa ditë pa aktivitet nga agjenti; sa thirrje në ditë.
 - Për t'u kontrolluar ligjërisht: Franca (orari i thirrjeve dhe pëlqimi), Gjermania (pëlqimi i shprehur për thirrje
   dhe pëlqimi për regjistrimin e thirrjes), EU AI Act (njoftimi që është AI).
+
+- **17.11.2026:** Me kërkesë të kompanisë, agjenti **nuk thotë më vetë në fillim që është AI** ("I'm calling from END Properties").
+  Mbetet rregulli: **nuk pretendon kurrë të jetë njeri** dhe, kur pyetet, thotë të vërtetën ("I am a virtual assistant").
+  ⚠️ Rrezik ligjor: për Francën dhe Gjermaninë (BE), neni 50 i AI Act (në fuqi nga gushti 2026) kërkon njoftim që personi
+  flet me AI. Rekomandimi ynë: kompania ta konfirmojë me avokat; ndryshimi kthehet lehtë te `n8n/code/prepare-call.js`.

@@ -17,12 +17,12 @@ const project = r.project_name && r.project_name !== 'END Properties' ? r.projec
 const followup = r.call_type === 'followup';
 const FIRST = followup
   ? {
-      en: `Hello, this is the AI assistant of END Properties. Some time ago you asked us about ${project}. This call is recorded, is that okay with you?`,
-      sq: `Përshëndetje, jam asistenti AI i END Properties. Pak kohë më parë na keni kontaktuar për ${project}. Kjo thirrje regjistrohet, a jeni dakord?`,
+      en: `Hello, I'm calling from END Properties. Some time ago you asked us about ${project}. This call is recorded, is that okay with you?`,
+      sq: `Përshëndetje, ju telefonoj nga END Properties. Pak kohë më parë na keni kontaktuar për ${project}. Kjo thirrje regjistrohet, a jeni dakord?`,
     }
   : {
-      en: `Hello, this is the AI assistant of END Properties. You filled in a form about ${project}. This call is recorded, is that okay with you?`,
-      sq: `Përshëndetje, jam asistenti AI i END Properties. Keni plotësuar një formular për ${project}. Kjo thirrje regjistrohet, a jeni dakord?`,
+      en: `Hello, I'm calling from END Properties. You filled in a form about ${project}. This call is recorded, is that okay with you?`,
+      sq: `Përshëndetje, ju telefonoj nga END Properties. Keni plotësuar një formular për ${project}. Kjo thirrje regjistrohet, a jeni dakord?`,
     };
 const lang = r.language === 'sq' ? 'sq' : 'en';
 
