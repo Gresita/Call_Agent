@@ -34,3 +34,5 @@ Planifiko thirrjet → shto lead-et e reja / shëno thirrjen), pastaj shkrimi n�
 dhe njoftimi në WhatsApp.
 
 Pret të tjerët: SIP nga Callgear (numri +971), kutia e pëlqimit në formularin e Meta-s, procesi i DNCR për numrat e UAE.
+- **17.11.2026:** Njoftimi i agjentit bëhet **brenda Pixxi-t** (faza + shënim + detyrë/Reminder për agjentin),
+  jo me WhatsApp. Nuk preket v18 dhe nuk duhet template i ri. WhatsApp mund të shtohet më vonë nëse agjentët i humbin lead-et.
