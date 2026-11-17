@@ -38,6 +38,7 @@ const lines = [
   `AI call result: ${LABELS[s.status] || s.status}`,
   s.preferred_channel ? `Preferred channel: ${s.preferred_channel === 'call' ? 'Call from agent' : 'WhatsApp'}` : null,
   s.next_call_at ? `Next AI call: ${new Date(s.next_call_at).toLocaleString('en-GB', { timeZone: 'Asia/Dubai' })} (Dubai)` : null,
+  r.callback_time && s.status === 'interested' ? `Asked our agent to call at: ${new Date(r.callback_time).toLocaleString('en-GB', { timeZone: 'Asia/Dubai' })} (Dubai)` : null,
   r.do_not_call ? 'Asked not to be called again.' : null,
   r.summary ? `Summary: ${r.summary}` : null,
   r.transcript ? `Transcript:\n${r.transcript}` : null,
