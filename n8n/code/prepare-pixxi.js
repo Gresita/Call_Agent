@@ -60,4 +60,25 @@ for (const k of KEEP) {
 if (Array.isArray(lead.speakers) && lead.speakers.length) updateBody.spokenLanguages = lead.speakers;
 updateBody.tagId = STAGES[s.status] || lead.tagId;
 
-return [{ json: { logBody, updateBody, stageChanged: updateBody.tagId !== lead.tagId } }];
+// Detyrë (reminder) për agjentin në Pixxi: vetëm kur lead-i duhet kontaktuar nga njeriu.
+let reminderBody = null;
+if ((s.status === 'interested' || s.status === 'no_contact') && lead.agentId) {
+  const dubaiNow = new Date(Date.now() + 4 * 3600000).toISOString().slice(0, 19).replace('T', ' ');
+  reminderBody = {
+    participants: [lead.agentId],
+    reminderType: 'TASK',
+    object_type: 'LEADS_REMINDER',
+    object_id: lead.id,
+    object_module: 'Buy Lead',
+    title: s.status === 'interested'
+      ? `AI call: ${lead.name || 'lead'} is interested - contact via ${s.preferred_channel === 'call' ? 'phone call' : 'WhatsApp'}`
+      : `AI call: no answer twice - please contact ${lead.name || 'the lead'}`,
+    description: lines.join('\n'),
+    reminder_start_time: dubaiNow,
+    send_notification_before: 0,
+    status: 'INIT',
+    operationPermission: 'COMPLETE_ONLY',
+  };
+}
+
+return [{ json: { logBody, updateBody, reminderBody, stageChanged: updateBody.tagId !== lead.tagId } }];
