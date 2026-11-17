@@ -1,22 +1,19 @@
-# Mesazhi i parë (First message)
+# Fjalia e parë (First message)
 
-Kjo është fjalia e parë që thotë agjenti kur lead-i e hap telefonin.
-Në ElevenLabs vendoset te **First message**, ndërsa versioni shqip te **Language overrides**.
+n8n e dërgon fjalinë e parë me çdo thirrje (override), sipas gjuhës dhe llojit të thirrjes.
+Në ElevenLabs, te "First message", mbetet versioni anglisht për lead të ri (për testet nga shfletuesi).
 
-Ndryshim nga skripta në plan: shtuam fjalinë **"Kjo thirrje regjistrohet"**, sepse rregullat e UAE
-kërkojnë njoftim kur thirrja regjistrohet, dhe transkripti shkon në Pixxi.
+Çdo version thotë: AI, END Properties, projekti, regjistrimi, dhe pyet për pëlqimin për regjistrimin
+(e nevojshme sidomos për Gjermaninë).
 
-## English
+## Lead i ri (call_type = new)
 
-> Hello, this is the AI assistant of END Properties. You filled in a form about {{project_name}}.
-> This call is recorded. Do you have a minute?
+- **EN:** Hello, this is the AI assistant of END Properties. You filled in a form about {{project_name}}. This call is recorded, is that okay with you?
+- **SQ:** Përshëndetje, jam asistenti AI i END Properties. Keni plotësuar një formular për {{project_name}}. Kjo thirrje regjistrohet, a jeni dakord?
 
-## Shqip
+## Follow-up (call_type = followup): lead-et në Follow Up / No Answer / 3- Future Prospect
 
-> Përshëndetje, jam asistenti AI i END Properties. Keni plotësuar një formular për {{project_name}}.
-> Kjo thirrje regjistrohet. A keni një minutë?
+- **EN:** Hello, this is the AI assistant of END Properties. Some time ago you asked us about {{project_name}}. This call is recorded, is that okay with you?
+- **SQ:** Përshëndetje, jam asistenti AI i END Properties. Pak kohë më parë na keni kontaktuar për {{project_name}}. Kjo thirrje regjistrohet, a jeni dakord?
 
-## العربية (opsionale, më vonë)
-
-Do ta shtojmë pasi të funksionojnë anglishtja dhe shqipja. Teksti duhet të kontrollohet nga
-dikush që flet arabisht para se të përdoret.
+Kosova → SQ. Franca dhe Gjermania → EN.

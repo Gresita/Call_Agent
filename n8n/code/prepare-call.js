@@ -11,10 +11,17 @@ const PHONE_NUMBER_ID = 'VENDOSE_PAS_TWILIO';            // ID e numrit në Elev
 const r = $json;
 const project = r.project_name || 'END Properties';
 
-const FIRST = {
-  en: `Hello, this is the AI assistant of END Properties. You filled in a form about ${project}. This call is recorded. Do you have a minute?`,
-  sq: `Përshëndetje, jam asistenti AI i END Properties. Keni plotësuar një formular për ${project}. Kjo thirrje regjistrohet. A keni një minutë?`,
-};
+// Fjalia e parë: lead i ri (plotësoi formularin tani) ose follow-up (lead i vjetër).
+const followup = r.call_type === 'followup';
+const FIRST = followup
+  ? {
+      en: `Hello, this is the AI assistant of END Properties. Some time ago you asked us about ${project}. This call is recorded, is that okay with you?`,
+      sq: `Përshëndetje, jam asistenti AI i END Properties. Pak kohë më parë na keni kontaktuar për ${project}. Kjo thirrje regjistrohet, a jeni dakord?`,
+    }
+  : {
+      en: `Hello, this is the AI assistant of END Properties. You filled in a form about ${project}. This call is recorded, is that okay with you?`,
+      sq: `Përshëndetje, jam asistenti AI i END Properties. Keni plotësuar një formular për ${project}. Kjo thirrje regjistrohet, a jeni dakord?`,
+    };
 const lang = r.language === 'sq' ? 'sq' : 'en';
 
 return {
@@ -29,6 +36,7 @@ return {
           language: lang,
           lead_name: r.lead_name || '',
           pixxi_lead_id: String(r.pixxi_lead_id),
+          call_type: followup ? 'followup' : 'new',
         },
         conversation_config_override: {
           agent: { first_message: FIRST[lang] },
