@@ -80,3 +80,11 @@ dëgjim (njohjen e fjalës). Nëse nuk e mbështet mirë njërën prej tyre, kem
 2. Provojmë një model tjetër zëri ose transkriptimi që e mbështet shqipen.
 
 Kjo është gjëja e parë që testojmë, sepse ndikon në gjithë planin.
+
+## 6. Knowledge base (v2, 17.11.2026)
+
+- **Knowledge base → Add document**: ngarko broshurat PDF të projekteve (një PDF për projekt, me emrin e projektit në titull).
+- Te agjenti: **Knowledge base** → shto dokumentet → aktivizo **RAG** (Use RAG).
+- Agjenti tregon vetëm **çmimin fillestar** dhe **planin e pagesës** nga broshura; detajet e tjera i jep agjenti njerëzor.
+- **Max call duration: 180 sekonda** (3 minuta).
+- Kur shtohet një projekt i ri: ngarko broshurën e re. Kur ndryshon çmimi: zëvendëso broshurën.
