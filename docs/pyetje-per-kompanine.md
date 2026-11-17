@@ -52,3 +52,7 @@ Për t'u kontrolluar para testit të parë:
 - Te "Përgatit thirrjen": vendos `PHONE_NUMBER_ID` pasi të lidhet numri nga Callgear.
 
 Pret të tjerët: SIP nga Callgear, kutia e pëlqimit në Meta, DNCR, konfirmimi i Dion-it për zërin, plani i ElevenLabs.
+
+- **17.11.2026:** Kompania **nuk ka llogari në Callgear** (fushat te Pixxi ishin bosh/autofill). Numri për thirrjet mbetet i hapur:
+  duhet ditur cili numër është i regjistruar me lejen e telemarketingut dhe te cili operator (du / e&).
+  Për testet e brendshme mund të përdoret Twilio (lidhje direkte me ElevenLabs); për lead-et e vërteta duhet numri i kompanisë.
