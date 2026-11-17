@@ -60,9 +60,9 @@ for (const k of KEEP) {
 if (Array.isArray(lead.speakers) && lead.speakers.length) updateBody.spokenLanguages = lead.speakers;
 updateBody.tagId = STAGES[s.status] || lead.tagId;
 
-// Detyrë (reminder) për agjentin në Pixxi: vetëm kur lead-i duhet kontaktuar nga njeriu.
+// Detyrë (reminder) për agjentin në Pixxi: i interesuar, jo tani, ose pa kontakt pas 2 provave.
 let reminderBody = null;
-if ((s.status === 'interested' || s.status === 'no_contact') && lead.agentId) {
+if (['interested', 'not_now', 'no_contact'].includes(s.status) && lead.agentId) {
   const dubaiNow = new Date(Date.now() + 4 * 3600000).toISOString().slice(0, 19).replace('T', ' ');
   reminderBody = {
     participants: [lead.agentId],
@@ -72,7 +72,9 @@ if ((s.status === 'interested' || s.status === 'no_contact') && lead.agentId) {
     object_module: 'Buy Lead',
     title: s.status === 'interested'
       ? `AI call: ${lead.name || 'lead'} is interested - contact via ${s.preferred_channel === 'call' ? 'phone call' : 'WhatsApp'}`
-      : `AI call: no answer twice - please contact ${lead.name || 'the lead'}`,
+      : s.status === 'not_now'
+        ? `AI call: ${lead.name || 'lead'} said not now - AI will call again ${s.next_call_at ? new Date(s.next_call_at).toLocaleString('en-GB', { timeZone: 'Asia/Dubai', day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' }) + ' (Dubai)' : 'later'}`
+        : `AI call: no answer twice - please contact ${lead.name || 'the lead'}`,
     description: lines.join('\n'),
     reminder_start_time: dubaiNow,
     send_notification_before: 0,
