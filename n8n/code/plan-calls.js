@@ -14,6 +14,7 @@ const REQUIRE_CONSENT = true;       // pa pëlqim nga formulari i Meta-s nuk th�
 const CALL_FROM = 9;                // ora lokale e klientit
 const CALL_TO = 18;
 const SQ_COUNTRIES = ['KOS', 'XK', 'ALB', 'AL', 'MKD', 'MK'];
+const PROJECT_NAMES = { END: 'END Properties' }; // fushata të përgjithshme, pa projekt
 
 const leads = (($('Merr lead-et nga Pixxi').first().json.data) || {}).list || [];
 const rows = $('Lexo tabelën').all().map((i) => i.json).filter((r) => r && r.pixxi_lead_id);
@@ -88,7 +89,7 @@ for (const l of leads) {
       pixxi_lead_id: String(l.id),
       phone,
       lead_name: l.name || null,
-      project_name: parts[0] || null,
+      project_name: PROJECT_NAMES[String(parts[0] || '').toUpperCase()] || parts[0] || null,
       language: sq ? 'sq' : 'en',
       lead_agent: agent.name || null,
       agent_phone: agent.phone || null,
