@@ -1,7 +1,7 @@
 // n8n Code node "Zgjidh follow-up" (Mode: Run Once for All Items)
-// Workflow: END Call Agent - Follow-up intake (një herë në ditë)
+// Workflow: END Call Agent - Lead intake, dega "Çdo ditë" (follow-up)
 // Para tij: "Merr të gjitha lead-et" (HTTP lead/list me pagination, një item për faqe)
-// dhe "Lexo tabelën" (Data table → Get, Return All, Execute Once, Always Output Data).
+// dhe "Lexo tabelën FU" (Data table → Get, Return All, Execute Once, Always Output Data).
 // Shton në tabelë lead-et e vjetra nga Meta në fazat Follow Up / No Answer / 3- Future Prospect,
 // që agjenti nuk i ka prekur në 7 ditët e fundit. Deri në DAILY_LIMIT në ditë.
 
@@ -14,7 +14,7 @@ const PROJECT_NAMES = { END: 'END Properties' };
 
 const pages = $('Merr të gjitha lead-et').all().map((i) => i.json);
 const leads = pages.flatMap((p) => (p.data && p.data.list) || []);
-const rows = $('Lexo tabelën').all().map((i) => i.json).filter((r) => r && r.pixxi_lead_id);
+const rows = $('Lexo tabelën FU').all().map((i) => i.json).filter((r) => r && r.pixxi_lead_id);
 const known = new Set(rows.map((r) => String(r.pixxi_lead_id)));
 const now = new Date();
 
