@@ -77,3 +77,6 @@ Pret të tjerët: SIP nga Callgear, kutia e pëlqimit në Meta, DNCR, konfirmimi
   Mbetet rregulli: **nuk pretendon kurrë të jetë njeri** dhe, kur pyetet, thotë të vërtetën ("I am a virtual assistant").
   ⚠️ Rrezik ligjor: për Francën dhe Gjermaninë (BE), neni 50 i AI Act (në fuqi nga gushti 2026) kërkon njoftim që personi
   flet me AI. Rekomandimi ynë: kompania ta konfirmojë me avokat; ndryshimi kthehet lehtë te `n8n/code/prepare-call.js`.
+- **17.11.2026:** Kompania do të marrë një **numër nga IPKO** (Kosovë) për thirrjet. Duhet kërkuar si **numër biznesi me SIP trunk**
+  (jo kartë SIM), me: adresë serveri SIP, username, password, transport (UDP/TCP/TLS), dhe tarifat drejt celularëve në
+  Kosovë, Francë dhe Gjermani. Thirrjet hyrëse: mesazh i shkurtër ose bllokim.
