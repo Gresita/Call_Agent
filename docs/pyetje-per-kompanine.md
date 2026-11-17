@@ -36,3 +36,19 @@ dhe njoftimi në WhatsApp.
 Pret të tjerët: SIP nga Callgear (numri +971), kutia e pëlqimit në formularin e Meta-s, procesi i DNCR për numrat e UAE.
 - **17.11.2026:** Njoftimi i agjentit bëhet **brenda Pixxi-t** (faza + shënim + detyrë/Reminder për agjentin),
   jo me WhatsApp. Nuk preket v18 dhe nuk duhet template i ri. WhatsApp mund të shtohet më vonë nëse agjentët i humbin lead-et.
+
+## Ku mbetëm (17.11.2026)
+
+Gati në n8n:
+- **Post-call result** (publikuar): lexon rezultatin dhe thirrjet që s'lidhen, llogarit statusin, ruan në tabelë.
+  Nyjet e Pixxi-t (lexo lead-in, shënim, fazë, detyrë për agjentin) janë gati por **të çaktivizuara** deri në Javën 3.
+- **Lead intake** (i ruajtur, jo i publikuar): merr lead-et nga reklamat, i shton në tabelë, vendos kë të thërrasë.
+  Nisja e thirrjes (Shëno thirrjen → Përgatit thirrjen → Nis thirrjen → Ruaj ID-në) është gati por **e çaktivizuar**.
+- Credentials: `Call Agent · Pixxi`, `Call Agent · ElevenLabs`.
+
+Për t'u kontrolluar para testit të parë:
+- ElevenLabs → agjenti → Security: lejo override për **First message** (n8n dërgon fjalinë e parë shqip/anglisht).
+- ElevenLabs → webhook: që të dërgohen edhe ngjarjet **call_initiation_failure**.
+- Te "Përgatit thirrjen": vendos `PHONE_NUMBER_ID` pasi të lidhet numri nga Callgear.
+
+Pret të tjerët: SIP nga Callgear, kutia e pëlqimit në Meta, DNCR, konfirmimi i Dion-it për zërin, plani i ElevenLabs.
