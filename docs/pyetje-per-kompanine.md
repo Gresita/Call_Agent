@@ -80,3 +80,13 @@ Pret të tjerët: SIP nga Callgear, kutia e pëlqimit në Meta, DNCR, konfirmimi
 - **17.11.2026:** Kompania do të marrë një **numër nga IPKO** (Kosovë) për thirrjet. Duhet kërkuar si **numër biznesi me SIP trunk**
   (jo kartë SIM), me: adresë serveri SIP, username, password, transport (UDP/TCP/TLS), dhe tarifat drejt celularëve në
   Kosovë, Francë dhe Gjermani. Thirrjet hyrëse: mesazh i shkurtër ose bllokim.
+
+## Sqarim nga Dion (mesazh zanor, 17.11.2026)
+
+1. **Agjenti për lead-et në Evropë**: vetëm thirrje e shkurtër për rikonfirmim interesi, pa bisedë të sofistikuar
+   dhe pa broshura → prompt v3.
+2. **Agjent i dytë, i ri: thirrje te pronarët (cold call)**, p.sh. të gjithë pronarët në "Marigona Residences" (Prishtinë),
+   për të pyetur nëse prona e tyre është në dispozicion për shitje ose qira. Skenari vjen nga Dion.
+   Për t'u diskutuar: nga vjen lista e pronarëve (Pixxi Owners API ka listë dhe log aktiviteti), pëlqimi/ligji për
+   thirrje te pronarët në Kosovë, dhe prezantimi: agjenti **nuk** mund të thotë "This is Dion" (do të pretendonte se
+   është njeri real); propozim: "I'm calling on behalf of Dion from E N D Properties".

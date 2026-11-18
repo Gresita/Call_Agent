@@ -81,7 +81,10 @@ dëgjim (njohjen e fjalës). Nëse nuk e mbështet mirë njërën prej tyre, kem
 
 Kjo është gjëja e parë që testojmë, sepse ndikon në gjithë planin.
 
-## 6. Knowledge base (v2, 17.11.2026)
+## 6. Knowledge base (v2, 17.11.2026) — NUK përdoret më për lead-et e Evropës (v3, 18.11.2026)
+
+Sipas Dion-it, agjenti i lead-eve vetëm rikonfirmon interesin. Broshurat mbeten në Knowledge base për agjentë të tjerë, por hiqen nga ky agjent. Max call duration: **120 sekonda**.
+
 
 - **Knowledge base → Add document**: ngarko broshurat PDF të projekteve (një PDF për projekt, me emrin e projektit në titull).
 - Te agjenti: **Knowledge base** → shto dokumentet → aktivizo **RAG** (Use RAG).
