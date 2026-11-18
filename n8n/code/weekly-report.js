@@ -2,7 +2,7 @@
 // Workflow: END Call Agent - Lead intake, dega "Çdo të hënë" (raporti javor)
 // Para tij: "Lexo tabelën R" (Data table → Get, Return All, Execute Once, Always Output Data)
 // dhe "Merr agjentët" (HTTP GET /pixxiapi/v1/agent/list).
-// Kthen një detyrë (Pixxi reminder) për menaxherët dhe një për çdo agjent me aktivitet.
+// Kthen një detyrë të vetme (Pixxi reminder) me përmbledhjen e javës, për Dion-in dhe Marketing.
 
 const MANAGERS = ['Dion Humolli', 'Marketing'];   // emrat si në Pixxi
 const DAYS = 7;
@@ -85,17 +85,6 @@ const out = [];
 const managerIds = MANAGERS.filter(allowed).map((n) => idByName[n.toLowerCase()]).filter(Boolean);
 if (managerIds.length) {
   out.push(task(managerIds, `AI calls weekly report: ${called.length} called, ${count(called, 'interested')} interested`, summary.join('\n')));
-}
-
-for (const [name, list] of Object.entries(byAgent)) {
-  const id = idByName[name.toLowerCase()];
-  if (!id || !allowed(name)) continue;
-  const lines = [`Your leads called by the AI agent (${period}):`, ''];
-  for (const r of list) {
-    lines.push(`- ${r.lead_name || r.pixxi_lead_id} (${r.project_name || '-'}): ${LABEL[r.status] || r.status}` +
-      (r.preferred_channel && r.status === 'interested' ? `, prefers ${r.preferred_channel}` : ''));
-  }
-  out.push(task([id], `AI calls this week: ${count(list, 'interested')} interested of ${list.length}`, lines.join('\n')));
 }
 
 return out;
