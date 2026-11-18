@@ -21,10 +21,12 @@ Ndiqe me radhë. Mos kalo në hapin tjetër pa e përfunduar të mëparshmin.
 ## C. n8n
 
 - [ ] Lead intake → **Përgatit thirrjen**: vendos `PHONE_NUMBER_ID`.
-- [ ] Krijo **lead testi** në Pixxi me numrin tënd (BUY, META_ADS nuk duhet; test manual).
+- [ ] Krijo **lead testi** në Pixxi me numrin tënd (BUY). Kujdes: v18 mund t'i dërgojë mesazh WhatsApp atij numri; njofto Dion-in që lead-i TEST është yti.
 
 ## D. Thirrja e parë testuese (vetëm te numri yt)
 
+- [ ] ⚠️ **Para çdo testi:** në tabelë ndrysho `status` e të gjitha rreshtave të vërtetë në `hold`, që Lead intake të mos thërrasë klientë
+      të vërtetë gjatë testit. Pas testeve ktheji në `pending`.
 - [ ] Në tabelën `call_agent_leads` shto me dorë një rresht testi: pixxi_lead_id = ID e lead-it testi, phone = numri yt,
       country = XK, language = sq, call_type = new, status = pending, attempts = 0, next_call_at = tani, consent = true.
 - [ ] Aktivizo vetëm: Shëno thirrjen → Përgatit thirrjen → Nis thirrjen → Ruaj ID-në e bisedës.
