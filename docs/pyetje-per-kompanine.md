@@ -100,3 +100,13 @@ Pret të tjerët: SIP nga Callgear, kutia e pëlqimit në Meta, DNCR, konfirmimi
   më 18.11.2026. Deri në rregullim: raporti dhe detyrat për agjentët në Pixxi janë të ndalura; faza dhe shënimi nuk preken.
 - Numri: email te Vala/Telekomi (business@kosovotelecom.com) për SIP trunk; pritet përgjigjja.
 - Agjenti 2 (pronarët, cold call): pret skenarin nga Dion.
+
+## Oferta e Valës / Telekomit të Kosovës për SIP (18.11.2026)
+
+- Numri celular ekzistues **nuk** mund të bëhet SIP. Ofrojnë **numër të ri biznesi** (+383 38 …) me SIP trunk.
+- Konfigurimi "Dynamic PBX": host `dpbx.ims.telekomi.net`, username/password, kodekë G.711 (ulaw/alaw), DTMF inband.
+- 2–30 kanale njëkohësisht sipas paketës (LTK10, LTK30), kontratë minimum 1 vit, mirëmbajtje 3.43 €/muaj.
+- Tarifat pa TVSH (peak 08–22 / off-peak 22–08): celularë në Kosovë 0.09 €/min; Gjermania = Zona 1 (celular 0.328 / 0.224 €/min);
+  Franca sipas listës së zonave (për t'u konfirmuar).
+- Për t'u konfirmuar me Valën: a funksionon nga interneti (ElevenLabs është cloud, pa IP fikse), transporti/porti,
+  a kërkohet REGISTER për thirrje dalëse, Caller ID për thirrjet jashtë vendit, bllokimi i thirrjeve hyrëse, çmimi i LTK10/LTK30.
