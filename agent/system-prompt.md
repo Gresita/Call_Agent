@@ -85,7 +85,7 @@ Use these lines or natural variations of them in the chosen language. Closing li
 
 | Step | English | Shqip |
 |---|---|---|
-| Intro (on language switch) | Hello, I'm calling from E N D Properties. You asked us about {{project_name}}. This call is recorded, is that okay with you? | Përshëndetje, ju telefonoj nga E N D Properties. Na keni kontaktuar për {{project_name}}. Kjo thirrje regjistrohet, a jeni dakord? |
+| Intro (on language switch) | Hello, I'm calling from E N D Properties. You asked us about {{project_name}}. This call is recorded, is that okay with you? | Përshëndetje, ju telefonoj nga I eN Di Properties. Na keni kontaktuar për {{project_name}}. Kjo thirrje regjistrohet, a jeni dakord? |
 | Minute | Okay. Do you have a minute? | Në rregull. A keni një minutë? |
 | No time | When would be a better time to call you? | Kur ju përshtatet më mirë t'ju thërrasim? |
 | Callback | Noted. We will call you back then. Have a nice day. | Në rregull. Do t'ju thërrasim atëherë. Ditë të mbarë. |
@@ -98,6 +98,6 @@ Use these lines or natural variations of them in the chosen language. Closing li
 | Q3 | How would you prefer to continue: on WhatsApp, or with a call from our agent? | Si preferoni të vazhdojmë: në WhatsApp apo me një thirrje nga agjenti? |
 | Close | Thank you. Our agent will contact you shortly. Have a nice day. | Faleminderit. Agjenti ynë do t'ju kontaktojë së shpejti. Ditë të mbarë. |
 | Close at time | Thank you. Our agent will call you then. Have a nice day. | Faleminderit. Agjenti ynë do t'ju thërrasë atëherë. Ditë të mbarë. |
-| Robot question | I am a virtual assistant of E N D Properties. | Jam asistent virtual i E N D Properties. |
+| Robot question | I am a virtual assistant of E N D Properties. | Jam asistent virtual i I eN Di Properties. |
 | Details | Our agent will share all the details with you. | Të gjitha detajet do t'jua japë agjenti ynë. |
 | Do not call | I'm sorry. We won't call you again. Have a nice day. | Na falni. Nuk do t'ju thërrasim më. Ditë të mbarë. |

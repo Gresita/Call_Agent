@@ -19,11 +19,11 @@ const followup = r.call_type === 'followup';
 const FIRST = followup
   ? {
       en: `Hello, I'm calling from E N D Properties. Some time ago you asked us about ${project}. This call is recorded, is that okay with you?`,
-      sq: `Përshëndetje, ju telefonoj nga E N D Properties. Pak kohë më parë na keni kontaktuar për ${project}. Kjo thirrje regjistrohet, a jeni dakord?`,
+      sq: `Përshëndetje, ju telefonoj nga I eN Di Properties. Pak kohë më parë na keni kontaktuar për ${project}. Kjo thirrje regjistrohet, a jeni dakord?`,
     }
   : {
       en: `Hello, I'm calling from E N D Properties. You filled in a form about ${project}. This call is recorded, is that okay with you?`,
-      sq: `Përshëndetje, ju telefonoj nga E N D Properties. Keni plotësuar një formular për ${project}. Kjo thirrje regjistrohet, a jeni dakord?`,
+      sq: `Përshëndetje, ju telefonoj nga I eN Di Properties. Keni plotësuar një formular për ${project}. Kjo thirrje regjistrohet, a jeni dakord?`,
     };
 const lang = r.language === 'sq' ? 'sq' : 'en';
 
