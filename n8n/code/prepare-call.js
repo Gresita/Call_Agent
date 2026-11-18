@@ -6,7 +6,8 @@
 // Më vonë (numri i kompanisë te du/e&, SIP): POST /v1/convai/sip-trunk/outbound-call
 
 const AGENT_ID = 'agent_8201m7htqaqsfxht7r924r64vfjk';  // END Call Agent
-const PHONE_NUMBER_ID = 'VENDOSE_PAS_TWILIO';            // ID e numrit në ElevenLabs (Phone Numbers), pasi të importohet numri i Twilio-s
+const PHONE_NUMBER_ID = 'VENDOSE_PAS_TWILIO';
+const ALBANIAN_VOICE_ID = 'VENDOSE_ID_E_ZERIT_ALBANIAN'; // ElevenLabs → Voices → "albanian" → Copy voice ID            // ID e numrit në ElevenLabs (Phone Numbers), pasi të importohet numri i Twilio-s
 
 const r = $json;
 const lang0 = r.language === 'sq' ? 'sq' : 'en';
@@ -42,6 +43,8 @@ return {
         },
         conversation_config_override: {
           agent: { first_message: FIRST[lang] },
+          // Thirrjet shqip: gjithë thirrja me zërin "albanian" (kërkon override "Voice" në Security).
+          ...(lang === 'sq' ? { tts: { voice_id: ALBANIAN_VOICE_ID } } : {}),
         },
       },
     },
