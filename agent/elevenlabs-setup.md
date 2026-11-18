@@ -91,3 +91,10 @@ Sipas Dion-it, agjenti i lead-eve vetëm rikonfirmon interesin. Broshurat mbeten
 - Agjenti tregon vetëm **çmimin fillestar** dhe **planin e pagesës** nga broshura; detajet e tjera i jep agjenti njerëzor.
 - **Max call duration: 180 sekonda** (3 minuta).
 - Kur shtohet një projekt i ri: ngarko broshurën e re. Kur ndryshon çmimi: zëvendëso broshurën.
+
+## 7. Zëri shqip për gjithë thirrjen (18.11.2026)
+
+- Zëri `albanian` = **Genta's vo 2** (voice ID `svt5wAKrg3xRZesB7JZ1`).
+- Security → Overrides: **First message** dhe **Voice** aktive.
+- n8n (Përgatit thirrjen) dërgon `tts.voice_id` = zëri shqip për thirrjet me `language = sq`, që nga fjala e parë.
+- Duhet konfirmim me shkrim edhe nga **Genta** që zëri i saj përdoret për thirrje me klientë.

@@ -7,7 +7,7 @@
 
 const AGENT_ID = 'agent_8201m7htqaqsfxht7r924r64vfjk';  // END Call Agent
 const PHONE_NUMBER_ID = 'VENDOSE_PAS_TWILIO';
-const ALBANIAN_VOICE_ID = 'VENDOSE_ID_E_ZERIT_ALBANIAN'; // ElevenLabs → Voices → "albanian" → Copy voice ID            // ID e numrit në ElevenLabs (Phone Numbers), pasi të importohet numri i Twilio-s
+const ALBANIAN_VOICE_ID = 'svt5wAKrg3xRZesB7JZ1';   // ElevenLabs → Voices → "albanian" → Copy voice ID            // ID e numrit në ElevenLabs (Phone Numbers), pasi të importohet numri i Twilio-s
 
 const r = $json;
 const lang0 = r.language === 'sq' ? 'sq' : 'en';
