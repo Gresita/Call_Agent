@@ -64,6 +64,11 @@ const transcript = (data.transcript || [])
 
 const toBool = (v) => v === true || String(v).toLowerCase() === 'true';
 
+// Testet nga shfletuesi në ElevenLabs nuk kanë pixxi_lead_id: nuk shkruhen në tabelë.
+if (!vars.pixxi_lead_id) {
+  return [];
+}
+
 return [
   {
     json: {
