@@ -17,6 +17,9 @@ const STAGES = {
 };
 
 const s = $('Llogarit statusin').first().json;
+const COUNTRY_TZ = { XK: ['Europe/Belgrade', 'Kosovo'], FR: ['Europe/Paris', 'France'], DE: ['Europe/Berlin', 'Germany'] };
+const [leadTz, leadPlace] = COUNTRY_TZ[($('Gjej lead-in').first().json || {}).country] || ['Asia/Dubai', 'Dubai'];
+const fmtLocal = (iso) => `${new Date(iso).toLocaleString('en-GB', { timeZone: leadTz, day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })} (${leadPlace} time)`;
 const r = $('Lexo rezultatin').first().json;
 const list = (($('Lexo lead-in në Pixxi').first().json.data) || {}).list || [];
 const lead = list.find((l) => String(l.id) === String(s.pixxi_lead_id));
@@ -37,8 +40,8 @@ const LABELS = {
 const lines = [
   `AI call result: ${LABELS[s.status] || s.status}`,
   s.preferred_channel ? `Preferred channel: ${s.preferred_channel === 'call' ? 'Call from agent' : 'WhatsApp'}` : null,
-  s.next_call_at ? `Next AI call: ${new Date(s.next_call_at).toLocaleString('en-GB', { timeZone: 'Asia/Dubai' })} (Dubai)` : null,
-  r.callback_time && s.status === 'interested' ? `Asked our agent to call at: ${new Date(r.callback_time).toLocaleString('en-GB', { timeZone: 'Asia/Dubai' })} (Dubai)` : null,
+  s.next_call_at ? `Next AI call: ${fmtLocal(s.next_call_at)}` : null,
+  s.callback_time && s.status === 'interested' ? `Asked our agent to call at: ${fmtLocal(s.callback_time)}` : null,
   r.do_not_call ? 'Asked not to be called again.' : null,
   r.summary ? `Summary: ${r.summary}` : null,
   r.transcript ? `Transcript:\n${r.transcript}` : null,
@@ -74,7 +77,7 @@ if (['interested', 'not_now', 'no_contact'].includes(s.status) && lead.agentId) 
     title: s.status === 'interested'
       ? `AI call: ${lead.name || 'lead'} is interested - contact via ${s.preferred_channel === 'call' ? 'phone call' : 'WhatsApp'}`
       : s.status === 'not_now'
-        ? `AI call: ${lead.name || 'lead'} said not now - AI will call again ${s.next_call_at ? new Date(s.next_call_at).toLocaleString('en-GB', { timeZone: 'Asia/Dubai', day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' }) + ' (Dubai)' : 'later'}`
+        ? `AI call: ${lead.name || 'lead'} said not now - AI will call again ${s.next_call_at ? fmtLocal(s.next_call_at) : 'later'}`
         : `AI call: no answer twice - please contact ${lead.name || 'the lead'}`,
     description: lines.join('\n'),
     reminder_start_time: dubaiNow,
