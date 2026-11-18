@@ -2,12 +2,11 @@
 // Workflow: END Call Agent - Lead intake
 // Para tij: "Shëno thirrjen" (Data table → Update, kthen rreshtin e përditësuar).
 // Ndërton trupin e kërkesës për ElevenLabs.
-// Tani (Twilio): POST /v1/convai/twilio/outbound-call
-// Më vonë (numri i kompanisë te du/e&, SIP): POST /v1/convai/sip-trunk/outbound-call
+// Numri vjen nga operatori me SIP trunk (Vala/IPKO): POST /v1/convai/sip-trunk/outbound-call
 
 const AGENT_ID = 'agent_8201m7htqaqsfxht7r924r64vfjk';  // END Call Agent
-const PHONE_NUMBER_ID = 'VENDOSE_PAS_TWILIO';
-const ALBANIAN_VOICE_ID = 'svt5wAKrg3xRZesB7JZ1';   // ElevenLabs → Voices → "albanian" → Copy voice ID            // ID e numrit në ElevenLabs (Phone Numbers), pasi të importohet numri i Twilio-s
+const PHONE_NUMBER_ID = 'VENDOSE_PAS_SIP';               // ElevenLabs → Phone Numbers → ID e numrit, pasi të lidhet SIP trunk
+const ALBANIAN_VOICE_ID = 'svt5wAKrg3xRZesB7JZ1';        // zëri "albanian" (Genta's vo 2)
 
 const r = $json;
 const lang0 = r.language === 'sq' ? 'sq' : 'en';
