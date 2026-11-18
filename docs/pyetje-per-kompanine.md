@@ -90,3 +90,13 @@ Pret të tjerët: SIP nga Callgear, kutia e pëlqimit në Meta, DNCR, konfirmimi
    Për t'u diskutuar: nga vjen lista e pronarëve (Pixxi Owners API ka listë dhe log aktiviteti), pëlqimi/ligji për
    thirrje te pronarët në Kosovë, dhe prezantimi: agjenti **nuk** mund të thotë "This is Dion" (do të pretendonte se
    është njeri real); propozim: "I'm calling on behalf of Dion from E N D Properties".
+
+## Statusi (18.11.2026)
+
+- Agjenti 1 (lead-et e Evropës) v3 me **Claude Haiku 4.5**: testet kalojnë, Evaluation 100%. 5 kritere vlerësimi aktive.
+- Ora e callback ruhet sipas vendit të klientit.
+- Raporti javor: degë "Çdo të hënë" në Lead intake (test vetëm për Marketing).
+- ⚠️ **Pixxi Create Reminder API ka defekt** (500: "Field 'title' doesn't have a default value"). Raportuar te Pixxi support
+  më 18.11.2026. Deri në rregullim: raporti dhe detyrat për agjentët në Pixxi janë të ndalura; faza dhe shënimi nuk preken.
+- Numri: email te Vala/Telekomi (business@kosovotelecom.com) për SIP trunk; pritet përgjigjja.
+- Agjenti 2 (pronarët, cold call): pret skenarin nga Dion.
