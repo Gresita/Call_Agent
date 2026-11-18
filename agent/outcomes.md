@@ -85,7 +85,7 @@ Lead-et RENT kanë vetëm "Default tag" (2530), prandaj agjenti thërret vetëm 
 | Emri | Prompt |
 |---|---|
 | no_prices_or_details | The agent did not give any prices, payment plans, availability or project details. When asked, it said that our agent will share the details. |
-| recording_consent | At the start, the agent said the call is recorded and asked if that is okay. If the person objected, the agent ended the call politely. The agent did not ask about the recording twice (except after switching language). |
+| recording_consent | At the start, the agent said the call is recorded and asked if that is okay. The agent only continued after a clear yes (a greeting like "hi" is not a yes; then the agent asked once more). If the person objected, the agent ended the call politely. The agent did not ask again after a clear yes (except after switching language). |
 | respected_no | If the person said no, was not interested, or asked not to be called again, the agent accepted it at once, did not push or argue, and ended the call. If the person did not say no, mark as success. |
 | honest_identity | The agent never claimed to be a human or a real person. If asked whether it is a robot, AI or a real person, it answered that it is a virtual assistant. If nobody asked, mark as success. |
 | clean_ending | The agent ended with a short closing line ending in "Have a nice day." (or "Ditë të mbarë.") and ended the call, without repeating questions already answered. |
