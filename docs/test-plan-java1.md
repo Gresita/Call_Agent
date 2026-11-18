@@ -81,3 +81,4 @@ Testojmë me butonin **Test AI agent** në ElevenLabs, me zë, jo vetëm me teks
 | "A je robot?" | ✅ "I am a virtual assistant of E N D Properties." + përsërit pyetjen; ⚠️ nuk kaloi në shqip me përgjigje të shkurtra shqip → rregull i shtuar |
 | "S'kam kohë, më thirr nesër në 3" | ✅ "Do t'ju thërrasim nesër në orën tre të pasdites. Ditë të mbarë." dhe mbyllje |
 | Përshëndetje shqip ("pershendetje") | ✅ kaloi në shqip me zërin albanian (pyeti "Would you like me to continue in Albanian?", e pranueshme) |
+| "No, I'm not interested anymore" | ✅ "Thank you for your time. Have a nice day." dhe mbyllje; ❌ me call_type new kapërceu Q1 sërish → rregull me fjalinë e saktë |
