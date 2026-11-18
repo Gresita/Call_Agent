@@ -1,14 +1,14 @@
 // n8n Code node "Ndërto raportin" (Mode: Run Once for All Items)
-// Workflow: END Call Agent - Weekly report
-// Para tij: "Lexo tabelën" (Data table → Get, Return All, Execute Once, Always Output Data)
+// Workflow: END Call Agent - Lead intake, dega "Çdo të hënë" (raporti javor)
+// Para tij: "Lexo tabelën R" (Data table → Get, Return All, Execute Once, Always Output Data)
 // dhe "Merr agjentët" (HTTP GET /pixxiapi/v1/agent/list).
 // Kthen një detyrë (Pixxi reminder) për menaxherët dhe një për çdo agjent me aktivitet.
 
 const MANAGERS = ['Dion Humolli', 'Marketing'];   // emrat si në Pixxi
 const DAYS = 7;
-const ONLY_TO = null;  // për test: p.sh. ['Marketing'] → krijon detyrë vetëm për këtë përdorues
+const ONLY_TO = ['Marketing'];  // TEST: vetëm për Marketing. Për raportin e vërtetë: null
 
-const rows = $('Lexo tabelën').all().map((i) => i.json).filter((r) => r && r.pixxi_lead_id && !String(r.pixxi_lead_id).startsWith('test'));
+const rows = $('Lexo tabelën R').all().map((i) => i.json).filter((r) => r && r.pixxi_lead_id && !String(r.pixxi_lead_id).startsWith('test'));
 const agentsRaw = $('Merr agjentët').first().json;
 const agents = Array.isArray(agentsRaw.data) ? agentsRaw.data : (agentsRaw.data && agentsRaw.data.list) || [];
 const idByName = {};
@@ -39,7 +39,8 @@ const period = `${fmt(since)} - ${fmt(now)}`;
 const summary = [
   `AI calling agent - weekly report (${period})`,
   '',
-  `New ad leads: ${newLeads.length}`,
+  `New Meta leads: ${newLeads.filter((r) => r.call_type !== 'followup').length}`,
+  `Old leads added for follow-up: ${newLeads.filter((r) => r.call_type === 'followup').length}`,
   `Leads called: ${called.length}`,
   `Interested: ${count(called, 'interested')} (${pct(count(called, 'interested'), called.length)})`,
   `Not now: ${count(called, 'not_now')}`,
