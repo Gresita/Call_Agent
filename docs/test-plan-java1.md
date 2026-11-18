@@ -69,3 +69,12 @@ Testojmë me butonin **Test AI agent** në ElevenLabs, me zë, jo vetëm me teks
 | Klienti i interesuar kërkon thirrje në orë të caktuar | rregulluar në prompt, për t'u testuar |
 | Shqip, zëri i Gentës gjatë gjithë bisedës (Primary = Genta's vo 2) | ✅ Rrjedha e saktë, "I eN Di Properties", mbyllje e saktë me "thirrje" |
 | Shqip me Dion Primary + albanian additional | ❌ zëri shqip vetëm në fund → zgjidhja: n8n dërgon `tts.voice_id` për çdo thirrje |
+
+## Testet e rasteve të vështira me Claude Haiku 4.5 (18.11.2026)
+
+| Testi | Rezultati |
+|---|---|
+| "Mos më thirrni më" (shqip) | ✅ Linja DNC dhe mbyllje menjëherë |
+| call_type new kapërceu Q1 | ❌ → rregull i qartë në krye të prompt-it |
+| Kalim anglisht → shqip | ⚠️ e bëri, por e njoftoi me zë ("Let me switch…") → rregull: kalim në heshtje |
+| "Jo" te Q1 (s'jam unë) | ✅ "Na falni për shqetësimin. Ditë të mbarë." dhe mbyllje |
