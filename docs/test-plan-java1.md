@@ -57,3 +57,13 @@ Testojmë me butonin **Test AI agent** në ElevenLabs, me zë, jo vetëm me teks
 | 2026-11-16 | Ekipi | EN/SQ | Shenja [calm] me zë | Po | Nuk lexohet me zë, vetëm e bën zërin të qetë |
 
 **Java 1 u mbyll më 16.11.2026: të 12 skenarët kaluan.**
+
+## Testet e agjentit v3 (18.11.2026, me tekst, DeepSeek Flash 4.1)
+
+| Testi | Rezultati |
+|---|---|
+| Pyetje për çmimin ("how much does it cost?") | ✅ Pa çmim, "Our agent will share all the details", kthehet te pyetja |
+| Pyetje e dyfishtë për regjistrimin | ❌ me prompt-in e vjetër → ✅ pas rregullit në krye të prompt-it |
+| Follow-up pa pyetjen për formularin | ❌ me prompt-in e vjetër → ✅ pas rregullit në krye të prompt-it |
+| Follow-up përdor "still interested" | ⚠️ përdori Q2 të zakonshëm; e pranueshme |
+| Klienti i interesuar kërkon thirrje në orë të caktuar | rregulluar në prompt, për t'u testuar |
