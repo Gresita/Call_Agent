@@ -67,3 +67,5 @@ Testojmë me butonin **Test AI agent** në ElevenLabs, me zë, jo vetëm me teks
 | Follow-up pa pyetjen për formularin | ❌ me prompt-in e vjetër → ✅ pas rregullit në krye të prompt-it |
 | Follow-up përdor "still interested" | ⚠️ përdori Q2 të zakonshëm; e pranueshme |
 | Klienti i interesuar kërkon thirrje në orë të caktuar | rregulluar në prompt, për t'u testuar |
+| Shqip, zëri i Gentës gjatë gjithë bisedës (Primary = Genta's vo 2) | ✅ Rrjedha e saktë, "I eN Di Properties", mbyllje e saktë me "thirrje" |
+| Shqip me Dion Primary + albanian additional | ❌ zëri shqip vetëm në fund → zgjidhja: n8n dërgon `tts.voice_id` për çdo thirrje |
