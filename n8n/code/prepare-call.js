@@ -6,7 +6,11 @@
 
 const AGENT_ID = 'agent_8201m7htqaqsfxht7r924r64vfjk';  // END Call Agent
 const PHONE_NUMBER_ID = 'VENDOSE_PAS_SIP';               // ElevenLabs → Phone Numbers → ID e numrit, pasi të lidhet SIP trunk
-const ALBANIAN_VOICE_ID = 'svt5wAKrg3xRZesB7JZ1';        // zëri "albanian" (Genta's vo 2)
+// Zëri për çdo thirrje, sipas gjuhës (kërkon override "Voice" në Security). Nuk varet nga zëri Primary.
+const VOICE_ID = {
+  sq: 'svt5wAKrg3xRZesB7JZ1', // Genta's vo 2
+  en: 'mn4tsj79x1vhrCkpyjQy', // Dion's VO
+};
 
 const r = $json;
 const lang0 = r.language === 'sq' ? 'sq' : 'en';
@@ -42,8 +46,7 @@ return {
         },
         conversation_config_override: {
           agent: { first_message: FIRST[lang] },
-          // Thirrjet shqip: gjithë thirrja me zërin "albanian" (kërkon override "Voice" në Security).
-          ...(lang === 'sq' ? { tts: { voice_id: ALBANIAN_VOICE_ID } } : {}),
+          tts: { voice_id: VOICE_ID[lang] },
         },
       },
     },

@@ -96,5 +96,5 @@ Sipas Dion-it, agjenti i lead-eve vetëm rikonfirmon interesin. Broshurat mbeten
 
 - Zëri `albanian` = **Genta's vo 2** (voice ID `svt5wAKrg3xRZesB7JZ1`).
 - Security → Overrides: **First message** dhe **Voice** aktive.
-- n8n (Përgatit thirrjen) dërgon `tts.voice_id` = zëri shqip për thirrjet me `language = sq`, që nga fjala e parë.
+- n8n (Përgatit thirrjen) dërgon `tts.voice_id` për çdo thirrje: shqip → Genta's vo 2 (`svt5wAKrg3xRZesB7JZ1`), anglisht → Dion's VO (`mn4tsj79x1vhrCkpyjQy`). Zëri Primary nuk ka rëndësi për thirrjet e vërteta.
 - Duhet konfirmim me shkrim edhe nga **Genta** që zëri i saj përdoret për thirrje me klientë.
