@@ -82,3 +82,6 @@ Testojmë me butonin **Test AI agent** në ElevenLabs, me zë, jo vetëm me teks
 | "S'kam kohë, më thirr nesër në 3" | ✅ "Do t'ju thërrasim nesër në orën tre të pasdites. Ditë të mbarë." dhe mbyllje |
 | Përshëndetje shqip ("pershendetje") | ✅ kaloi në shqip me zërin albanian (pyeti "Would you like me to continue in Albanian?", e pranueshme) |
 | "No, I'm not interested anymore" | ✅ "Thank you for your time. Have a nice day." dhe mbyllje; ❌ me call_type new kapërceu Q1 sërish → rregull me fjalinë e saktë |
+| Q1 për lead të ri pas rregullit me fjalinë e saktë | ✅ "Was it you who filled in the form?" pas minutës |
+
+Përfundim (18.11.2026): rastet e vështira kalojnë me Claude Haiku 4.5 dhe prompt-in v3. Të testohet përsëri me thirrje të vërteta në Javën 3.
