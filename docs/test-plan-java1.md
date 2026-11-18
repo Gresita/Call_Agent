@@ -78,3 +78,4 @@ Testojmë me butonin **Test AI agent** në ElevenLabs, me zë, jo vetëm me teks
 | call_type new kapërceu Q1 | ❌ → rregull i qartë në krye të prompt-it |
 | Kalim anglisht → shqip | ⚠️ e bëri, por e njoftoi me zë ("Let me switch…") → rregull: kalim në heshtje |
 | "Jo" te Q1 (s'jam unë) | ✅ "Na falni për shqetësimin. Ditë të mbarë." dhe mbyllje |
+| "A je robot?" | ✅ "I am a virtual assistant of E N D Properties." + përsërit pyetjen; ⚠️ nuk kaloi në shqip me përgjigje të shkurtra shqip → rregull i shtuar |
