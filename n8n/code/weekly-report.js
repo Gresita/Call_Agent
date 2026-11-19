@@ -2,11 +2,11 @@
 // Workflow: END Call Agent - Lead intake, dega "Çdo të hënë" (raporti javor)
 // Para tij: "Lexo tabelën R" (Data table → Get, Return All, Execute Once, Always Output Data)
 // dhe "Merr agjentët" (HTTP GET /pixxiapi/v1/agent/list).
-// Kthen një detyrë të vetme (Pixxi reminder) me përmbledhjen e javës, për Dion-in dhe Marketing.
+// Kthen një detyrë të vetme (Pixxi reminder) me përmbledhjen e javës, për Dion-in dhe Admin.
 
-const MANAGERS = ['Dion Humolli', 'Marketing'];   // emrat si në Pixxi
+const MANAGERS = ['Dion Humolli', 'Admin'];   // emrat si në Pixxi
 const DAYS = 7;
-const ONLY_TO = ['Marketing'];  // TEST: vetëm për Marketing. Për raportin e vërtetë: null
+const ONLY_TO = ['Admin'];  // TEST: vetëm për Admin. Për raportin e vërtetë: null
 
 const rows = $('Lexo tabelën R').all().map((i) => i.json).filter((r) => r && r.pixxi_lead_id && !String(r.pixxi_lead_id).startsWith('test'));
 const agentsRaw = $('Merr agjentët').first().json;
