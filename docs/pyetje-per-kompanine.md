@@ -110,3 +110,5 @@ Pret të tjerët: SIP nga Callgear, kutia e pëlqimit në Meta, DNCR, konfirmimi
   Franca sipas listës së zonave (për t'u konfirmuar).
 - Për t'u konfirmuar me Valën: a funksionon nga interneti (ElevenLabs është cloud, pa IP fikse), transporti/porti,
   a kërkohet REGISTER për thirrje dalëse, Caller ID për thirrjet jashtë vendit, bllokimi i thirrjeve hyrëse, çmimi i LTK10/LTK30.
+
+- **19.11.2026:** ✅ Pixxi e rregulloi Create Reminder API (test me statusCode 200). Detyrat dhe raporti javor mund të aktivizohen.

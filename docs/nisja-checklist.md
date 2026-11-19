@@ -8,7 +8,7 @@ Ndiqe me radhë. Mos kalo në hapin tjetër pa e përfunduar të mëparshmin.
 - [ ] Kemi të dhënat e SIP: numri +383 38…, serveri, username, password (password vetëm në ElevenLabs, jo në chat).
 - [ ] Konfirmim me shkrim nga **Dion** dhe **Genta** për zërat.
 - [ ] Plani i ElevenLabs mjafton për volumin (kontrollo kreditet).
-- [ ] Pixxi e ka rregulluar Create Reminder API (përndryshe detyrat mbeten të çaktivizuara).
+- [x] Pixxi e ka rregulluar Create Reminder API (19.11.2026).
 
 ## B. Lidhja e numrit (ElevenLabs)
 
